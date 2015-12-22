@@ -8,11 +8,12 @@
 <article class="{{post_class}}">
 
 	<div class="post-table-hack-wrapper">
-		<div class="post-image {{#if image}}post-image--image-exists{{/if}}" style="background-image: url({{image}});"></div>
+		<div class="post-image post-image--big-screen {{#unless image}}post-image--no-image{{/unless}}" style="background-image: url({{image}});"></div>
 		<div class="post-text {{#if image}}post-text--image-exists{{/if}}">
 			<header class="post-header">
 				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 			</header>
+			<div class="post-image post-image--small-screen {{#unless image}}post-image--no-image{{/unless}}" style="background-image: url({{image}});"></div>
 			<section class="post-excerpt">
 				<p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
 			</section>
