@@ -1048,11 +1048,10 @@ body:not(.post-template) .post-title {
 
 /* Laurie stuff. not single post but whatever */
 
-.post-table-hack-wrapper {
-	display: table;
-}
-
 .post-image {
+	width:100%;
+	height: 100px;
+	margin-bottom: 12px;
 	background-size: cover;
 	background-position: 25%;
 	border: #EBF2F6 1px solid;
@@ -1061,39 +1060,6 @@ body:not(.post-template) .post-title {
 .post-image--no-image {
 	display: none;
 }
-
-.post-image--big-screen {
-	display: table-cell;
-	width: 200px;
-}
-
-.post-image--small-screen {
-	width:100%;
-	height: 100px;
-	margin-bottom: 12px;
-}
-
-/* super arbitrary breakpoint */
-@media only screen and (max-width: 639px) {
-
-	.post-image--big-screen {
-		display: none;
-	}
-
-}
-/* super arbitrary breakpoint */
-@media only screen and (min-width: 640px) {
-
-	.post-image--small-screen {
-		display: none;
-	}
-
-	.post-text--image-exists {
-		display: table-cell;
-		padding-left: 24px;
-	}
-}
-
 
 /* End laurie stuff */
 

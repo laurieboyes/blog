@@ -1,31 +1,25 @@
 {{! Previous/next page links - only displayed on page 2+ }}
 <div class="extra-pagination inner">
-    {{pagination}}
+	{{pagination}}
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}}">
-
-	<div class="post-table-hack-wrapper">
-		<div class="post-image post-image--big-screen {{#unless image}}post-image--no-image{{/unless}}" style="background-image: url({{image}});"></div>
-		<div class="post-text {{#if image}}post-text--image-exists{{/if}}">
-			<header class="post-header">
-				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			</header>
-			<div class="post-image post-image--small-screen {{#unless image}}post-image--no-image{{/unless}}" style="background-image: url({{image}});"></div>
-			<section class="post-excerpt">
-				<p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-			</section>
-			<footer class="post-meta">
-				{{tags}}
-				<time class="post-date {{#if tags}}post-date--after-tags{{/if}}"
-					  datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-			</footer>
-
-		</div>
-	</div>
-</article>
+	<article class="{{post_class}}">
+		<header class="post-header">
+			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+		</header>
+		<div class="post-image {{#unless image}}post-image--no-image{{/unless}}"
+			 style="background-image: url({{image}});"></div>
+		<section class="post-excerpt">
+			<p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+		</section>
+		<footer class="post-meta">
+			{{tags}}
+			<time class="post-date {{#if tags}}post-date--after-tags{{/if}}"
+				  datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+		</footer>
+	</article>
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
