@@ -1061,7 +1061,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-image--image-exists {
-	display: table;
+	display: table-cell;
 }
 
 .post-text {
