@@ -14,7 +14,7 @@
     </section>
     <footer class="post-meta">
         {{tags}}
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        <time class="post-date {{#if tags}}post-date--after-tags{{/if}}" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
     </footer>
 </article>
 {{/foreach}}
